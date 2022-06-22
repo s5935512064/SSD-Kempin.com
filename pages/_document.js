@@ -7,7 +7,6 @@ export default class MyDocument extends Document {
             <Html>
                 <Head>
 
-
                     {/* Global Site Tag (gtag.js) - Google Analytics */}
                     <script
                         type="text/plain"

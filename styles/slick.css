@@ -1,0 +1,67 @@
+#content .slick-dots {
+  bottom: 30px;
+  z-index: 20;
+}
+
+#service #content .slick-dots {
+  bottom: 150px;
+  z-index: 30 !important;
+}
+
+#service2 #content .slick-dots {
+  bottom: 250px;
+  z-index: 20;
+}
+
+#content .slick-dots li button:before {
+  font-size: 12px;
+  color: #b6a694;
+  filter: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1))
+    drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));
+}
+
+#content .slick-dots li {
+  margin: 1px !important;
+}
+
+#content .slick-next,
+.slick-prev {
+  width: 64px;
+  height: 64px;
+}
+
+#content .slick-prev {
+  transform: translateY(-33px);
+  left: 15px;
+  z-index: 20;
+  visibility: hidden;
+}
+
+#content .slick-next {
+  right: 15px;
+  z-index: 20;
+  visibility: hidden;
+}
+
+@media screen and (min-width: 1024px) {
+  #content .slick-prev {
+    left: 300px;
+    z-index: 20;
+    visibility: visible;
+  }
+
+  #content .slick-next {
+    right: 100px;
+    z-index: 20;
+    visibility: visible;
+  }
+}
+#content .slick-next:before,
+.slick-prev:before {
+  font-size: 0px;
+  color: #b6a694;
+}
+
+#content .slick-arrow {
+  color: #b6a694;
+}

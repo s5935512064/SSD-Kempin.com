@@ -40,10 +40,10 @@ const Navbar = () => {
 
     return (
         <>
-            <div className="fixed top-0 h-16 w-full flex justify-center bg-[#010F2A] z-20">
-                <div className="max-w-7xl w-full h-full px-2 lg:px-10 flex justify-between ">
-                    <div className="lg:hidden">
+            <div className="px-2 lg:px-10 fixed top-0 h-16 w-full flex justify-center bg-[#010F2A] z-20">
+                <div className="max-w-7xl w-full h-full flex justify-between ">
 
+                    <div className="lg:hidden">
                         <div
                             id="menu"
                             className={navbarOpen ? "menu open " : "menu "}
@@ -80,7 +80,7 @@ const Navbar = () => {
                         {listMenu.map((item, index) => (
                             <Link key={index} href={item.href} scroll={false}>
                                 <button
-                                    className={classNames(router.pathname === item.href ? "underline underline-offset-4  decoration-4" : "", "text-[#B6A694] px-4 cursor-pointer uppercase")}
+                                    className={classNames(router.pathname === item.href ? "" : "", "text-[#B6A694] px-4 cursor-pointer uppercase")}
                                 >
                                     {item.name}
                                 </button>
@@ -90,7 +90,7 @@ const Navbar = () => {
                     </div>
 
                     <div>
-                        <Link href="/register">
+                        <Link href="/enquiry">
                             <button
                                 className="h-full px-4 items-center cursor-pointer uppercase text-red-700 font-semibold"
                             >
@@ -100,6 +100,7 @@ const Navbar = () => {
                     </div>
 
                 </div>
+
 
                 <div
                     id="mobile-menu"

@@ -3,13 +3,13 @@ import Link from "next/link";
 const Footer = () => {
     return (
         <>
-            <div className="px-4 md:px-10 z-50! relative  bottom-2 h-full w-full flex items-center justify-center mt-40 md:mt-32 lg:mt-52 xl:mt-56 ">
+            <div className="px-5 md:px-10 z-50! relative  bottom-2 h-full w-full flex items-center justify-center mt-40 md:mt-32 lg:mt-52 xl:mt-56">
 
                 <div className=" max-w-7xl w-full h-full flex flex-col lg:flex-row lg:justify-between items-center lg:border-t lg:border-[#B6A694]">
 
                     <div className=" w-full  py-2  flex flex-col lg:flex-row gap-3  h-full justify-center items-center text-[#B6A694]">
                         <div className="flex  flex-col lg:flex-row justify-start items-center w-full lg:w-4/5 ">
-                            <p className=" text-xs  py-1 md:mr-3">
+                            <p className="text-sm py-1 md:mr-3">
                                 More ways to contact us
                             </p>
                             <div className="flex items-center gap-2  ">
@@ -157,19 +157,19 @@ const Footer = () => {
                             </div>
                         </div>
 
-                        <div className="w-full flex  divide-x divide-[#b6a694] justify-center lg:justify-start gap-3 lg:border-l border-[#b6a694]   ">
+                        <div className="w-full flex divide-x divide-[#b6a694] justify-center lg:justify-start gap-2 lg:border-l border-[#b6a694]  ">
 
-                            <p className=" text-xs cursor-pointer pl-3  ">
+                            <p className=" text-sm cursor-pointer md:pl-3  ">
                                 Disclaimer
                             </p>
-                            <p className=" text-xs pl-3 cursor-pointer ">
+                            <p className=" text-sm pl-3 cursor-pointer ">
                                 Privacy Policy
                             </p>
                         </div>
                     </div>
 
                     <div className="  w-full lg:w-1/2 border-t border-[#B6A694] py-2 h-full items-center lg:border-0">
-                        <p className="text-[#B6A694] text-xs text-center lg:text-right">
+                        <p className="text-[#B6A694] text-sm text-center lg:text-right">
                             Copyright © 2022 Siam Sindhorn Co., Ltd. All rights reserved.
                         </p>
                     </div>

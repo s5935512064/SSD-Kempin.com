@@ -1,5 +1,8 @@
 import '../styles/globals.css'
 import "../styles/cookieconsent.css";
+// import '../styles/slick.css'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import { AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";
 import React, { useState, useEffect } from "react";
@@ -8,7 +11,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "@fancyapps/ui/dist/fancybox.css";
 import axios from 'axios';
-import Script from 'next/script'
+
 import { v4 as uuidv4 } from 'uuid';
 
 function MyApp({ Component, pageProps }) {
@@ -198,7 +201,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
 
-      <Script
+      {/* <Script
         strategy="afterInteractive"
         data-cookiecategory="analytics"
         async
@@ -218,7 +221,7 @@ function MyApp({ Component, pageProps }) {
             });
           `,
         }}
-      />
+      /> */}
 
       <AnimatePresence
         exitBeforeEnter
