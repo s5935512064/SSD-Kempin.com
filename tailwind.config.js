@@ -4,7 +4,12 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        kingsCaslon: ["kings_caslonregular", "sans-serif"],
+        Heleness: ["helenehessregular", "sans-serif"],
+      },
+    },
     screens: {
       xs: "460px",
       sm: "640px",

@@ -1,8 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
+    <loc>http://localhost:3000/concept</loc>
+    <lastmod>2022-06-23T10:48:18.546Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://localhost:3000/contact</loc>
+    <lastmod>2022-06-23T10:48:18.546Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://localhost:3000/enquiry</loc>
+    <lastmod>2022-06-23T10:48:18.546Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://localhost:3000/gallery</loc>
+    <lastmod>2022-06-23T10:48:18.546Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>http://localhost:3000</loc>
-    <lastmod>2022-06-22T06:31:53.380Z</lastmod>
+    <lastmod>2022-06-23T10:48:18.546Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://localhost:3000/residence</loc>
+    <lastmod>2022-06-23T10:48:18.546Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://localhost:3000/service</loc>
+    <lastmod>2022-06-23T10:48:18.546Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://localhost:3000/news/index</loc>
+    <lastmod>2022-06-23T10:48:18.546Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>

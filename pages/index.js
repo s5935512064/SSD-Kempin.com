@@ -47,11 +47,11 @@ export default function Home() {
               />
             </div>
 
-            <p className="text-white text-lg md:text-xl ">
+            <p className="text-white text-lg md:text-xl font-kingsCaslon ">
               is luxury but humble
             </p>
 
-            <p className="text-center text-white text-xl md:text-3xl  p-2 w-full max-w-3xl mt-10">
+            <p className="font-kingsCaslon text-center text-white text-xl md:text-3xl  p-5 w-full max-w-3xl mt-10">
               The Residences at Sindhorn Kempinski Hotel Bangkok <br />
               <span className="text-base md:text-xl ">
                 Creates a new benchmark for unique cosmopolitan living in the heart of Bangkok.harmonizes environmental-friendliness, peacefulness and verdant green surroundings with exceptional amenities.
@@ -115,16 +115,17 @@ export default function Home() {
 
           </div>
 
-          <div className="max-w-7xl w-full min-h-[666px] h-full px-5 md:px-10 bg-[url('/assets/background.jpg')] bg-top bg-no-repeat bg-cover mb-4 grid grid-cols-1 md:grid-cols-2">
-            <div className="md:pr-16 flex flex-col justify-center items-center text-white py-5">
-              <p className="md:w-full text-4xl font-bold mb-5 md:mb-10 text-center md:text-left">Residence</p>
+          <div className="max-w-7xl w-full min-h-[666px] h-full px-5 md:px-10 bg-[url('/assets/gallery/gallery.jpg')] bg-top bg-no-repeat bg-cover mb-4 grid grid-cols-1 md:grid-cols-2 relative ">
+            <div className="absolute w-full h-full bg-gradient-to-b from-[#010F2A]/50 " />
+            <div className="md:pr-16 flex flex-col justify-center items-center text-white py-5 z-10">
+              <p className="md:w-full text-4xl font-bold mb-5 md:mb-10 text-center md:text-left">Gallery</p>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi iure molestias repellendus odit error voluptatum veniam aliquam nemo autem atque. Earum ratione nesciunt aliquid sed laboriosam similique vel consectetur repellat.</p>
               <div className="w-full mt-5 md:mt-10 ">
 
                 <button className="uppercase">discover more</button>
               </div>
             </div>
-            <div className="h-full flex justify-center items-center py-5">
+            <div className="h-full flex justify-center items-center py-5 z-10">
 
               <div className="w-full h-[350px] md:h-[440px] bg-white">
 
@@ -132,16 +133,17 @@ export default function Home() {
             </div>
 
           </div>
-          <div className="max-w-7xl w-full min-h-[666px] h-full px-5 md:px-10 bg-[url('/assets/background.jpg')] bg-top bg-no-repeat bg-cover mb-4 grid grid-cols-1 md:grid-cols-2">
-            <div className="md:pr-16 flex flex-col justify-center items-center text-white py-5">
-              <p className="md:w-full text-4xl font-bold mb-5 md:mb-10 text-center md:text-left">Residence</p>
+          <div className="max-w-7xl w-full min-h-[666px] h-full px-5 md:px-10  bg-[url('/assets/service/service1.jpg')] bg-center bg-no-repeat bg-cover mb-4 grid grid-cols-1 md:grid-cols-2 relative">
+            <div className="absolute w-full h-full bg-gradient-to-b from-[#010F2A]/50 " />
+            <div className="md:pr-16 flex flex-col justify-center items-center text-white py-5 z-10">
+              <p className="md:w-full text-4xl font-bold mb-5 md:mb-10 text-center md:text-left">Service</p>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi iure molestias repellendus odit error voluptatum veniam aliquam nemo autem atque. Earum ratione nesciunt aliquid sed laboriosam similique vel consectetur repellat.</p>
               <div className="w-full mt-5 md:mt-10 ">
 
                 <button className="uppercase">discover more</button>
               </div>
             </div>
-            <div className="h-full flex justify-center items-center py-5">
+            <div className="h-full flex justify-center items-center py-5 z-10">
 
               <div className="w-full h-[350px] md:h-[440px] bg-white">
 

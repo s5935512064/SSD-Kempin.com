@@ -5,28 +5,52 @@ import React, { useState, useEffect } from "react";
 import { Fancybox, Carousel, Panzoom } from "@fancyapps/ui";
 import Fancybox2 from "../components/Fancybox";
 
-const image = [
-    { id: 1, src: "/assets/gallery/service2.jpg", alt: "gallet" },
-    { id: 2, src: "/assets/gallery/service4.jpg", alt: "gallet" },
-    { id: 3, src: "/assets/gallery/service6.jpg", alt: "gallet" },
-    { id: 4, src: "/assets/gallery/service7.jpg", alt: "gallet" },
-    { id: 5, src: "/assets/gallery/service11.jpg", alt: "gallet" },
-    { id: 6, src: "/assets/gallery/service15.jpg", alt: "gallet" },
-    { id: 7, src: "/assets/gallery/swimming3.jpg", alt: "gallet" },
-    { id: 8, src: "/assets/gallery/swimming4.jpg", alt: "gallet" }
+const interior = [
+
+    { id: 4, src: "/assets/gallery/service7.jpg", alt: "interior" },
+    { id: 5, src: "/assets/gallery/service11.jpg", alt: "interior" },
+    { id: 6, src: "/assets/gallery/service15.jpg", alt: "interior" },
+
+]
+
+const exterior = [
+    { id: 1, src: "/assets/gallery/service2.jpg", alt: "exterior" },
+    { id: 2, src: "/assets/gallery/service4.jpg", alt: "exterior" },
+    { id: 3, src: "/assets/gallery/service6.jpg", alt: "exterior" },
+    { id: 7, src: "/assets/gallery/swimming3.jpg", alt: "exterior" },
+    { id: 8, src: "/assets/gallery/swimming4.jpg", alt: "exterior" },
+
+]
+
+const videoList = [
+    { id: 1, src: "https://www.youtube.com/embed/pFsgzj7bBQ4" },
+    { id: 2, src: "https://www.youtube.com/embed/Z_iIfOIeSSY" },
+    { id: 3, src: "https://www.youtube.com/embed/lf7Lt0-tRt0" },
+    { id: 4, src: "https://www.youtube.com/embed/mc1lnlzZRRQ" },
+    { id: 5, src: "https://www.youtube.com/embed/LGRZ2iswkmg" },
+    { id: 6, src: "https://www.youtube.com/embed/UqLwSSU4Chk" },
+    { id: 7, src: "https://www.youtube.com/embed/YvLBIfz3pVg" }
 
 ]
 
 const gallery = () => {
 
     const [openTab, setOpenTab] = useState(1);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        setLoading(true)
+        setTimeout(() => {
+            setLoading(false)
+        }, 500)
+    }, [openTab])
 
     useEffect(() => {
         document.body.style.background = "white"
     }, [])
 
     useEffect(() => {
-        Fancybox.bind('[data-fancybox="gallery"]', {
+        Fancybox.bind('[data-fancybox]', {
             Carousel: {
                 on: {
                     change: (that) => {
@@ -40,7 +64,7 @@ const gallery = () => {
 
         const mainCarousel = new Carousel(document.querySelector("#mainCarousel"), {
             Dots: false,
-            friction: 0.96,
+            friction: 0.9,
             center: true,
             slidesPerPage: 1,
         });
@@ -56,73 +80,48 @@ const gallery = () => {
             slidesPerPage: 1,
             infinite: false,
         });
-    })
+
+    }, [openTab])
 
     useEffect(() => {
-        Fancybox.bind('[data-fancybox="gallery2"]', {
-            Carousel: {
-                on: {
-                    change: (that) => {
-                        mainCarousel2.slideTo(mainCarousel2.findPageForSlide(that.page), {
-                            friction: 0,
-                        });
+        if (openTab == 2) {
+            setTimeout(() => {
+                Fancybox.bind('[data-fancybox', {
+                    Carousel: {
+                        on: {
+                            change: (that) => {
+                                mainCarousel2.slideTo(mainCarousel2.findPageForSlide(that.page), {
+                                    friction: 0,
+                                });
+                            },
+                        },
                     },
-                },
-            },
-        });
+                });
 
-        const mainCarousel2 = new Carousel(document.querySelector("#mainCarousel2"), {
-            Dots: false,
-            friction: 0.96,
-            center: true,
-            slidesPerPage: 1,
-        });
+                const mainCarousel2 = new Carousel(document.querySelector("#mainCarousel2"), {
+                    Dots: false,
+                    friction: 0.9,
+                    center: true,
+                    slidesPerPage: 1,
+                });
 
-        const thumbCarousel2 = new Carousel(document.querySelector("#thumbCarousel2"), {
-            Sync: {
-                target: mainCarousel2,
-                friction: 0.96,
-            },
-            Dots: false,
-            Navigation: false,
-            center: true,
-            slidesPerPage: 1,
-            infinite: false,
-        });
+                const thumbCarousel2 = new Carousel(document.querySelector("#thumbCarousel2"), {
+                    Sync: {
+                        target: mainCarousel2,
+                        friction: 0.96,
+                    },
+                    Dots: false,
+                    Navigation: false,
+                    center: true,
+                    slidesPerPage: 1,
+                    infinite: false,
+                });
+            }, 600)
+
+
+        }
     })
 
-    useEffect(() => {
-        Fancybox.bind('[data-fancybox="gallery3"]', {
-            Carousel: {
-                on: {
-                    change: (that) => {
-                        mainCarousel3.slideTo(mainCarousel3.findPageForSlide(that.page), {
-                            friction: 0,
-                        });
-                    },
-                },
-            },
-        });
-
-        const mainCarousel3 = new Carousel(document.querySelector("#mainCarousel3"), {
-            Dots: false,
-            friction: 0.96,
-            center: true,
-            slidesPerPage: 1,
-        });
-
-        const thumbCarousel3 = new Carousel(document.querySelector("#thumbCarousel3"), {
-            Sync: {
-                target: mainCarousel3,
-                friction: 0.96,
-            },
-            Dots: false,
-            Navigation: false,
-            center: true,
-            slidesPerPage: 1,
-            infinite: false,
-        });
-    })
 
     return (
         <Layout>
@@ -156,90 +155,91 @@ const gallery = () => {
                     </div>
                 </section>
 
-                <section id="gallerycontent" className="w-full h-full relative flex justify-center mt-20 px-5 md:px-10">
+                <section id="gallerycontent" className="w-full h-full relative flex justify-center mt-4 md:mt-20 px-2 md:px-10">
                     <div className="max-w-7xl w-full relative h-full">
                         <div className="flex flex-wrap">
-                            <div className="w-full">
-                                <ul
-                                    className="flex mb-0 list-none flex-wrap flex-row w-fulljustify-center"
-                                    role="tablist"
-                                    aria-owns="tab-1 tab-2"
-                                >
-                                    <li id="tab-1" role="tab" className="-mb-px last:mr-0 flex-auto text-center">
-                                        <a
-                                            className={
-                                                "text-sm px-5 py-3  block leading-normal " +
-                                                (openTab === 1
-                                                    ? "text-white bg-[#82603f] border border-[#82603f]"
-                                                    : "text-gray-500 border border-[#82603f] ")
-                                            }
-                                            onClick={e => {
-                                                e.preventDefault();
-                                                setOpenTab(1);
-                                            }}
-                                            data-toggle="tab"
-                                            href="#link1"
+                            <div className="w-full h-full relative ">
+                                <div className="absolute md:relative top-5  z-10 w-full pb-2 " >
+                                    <ul
+                                        className="flex mb-0 list-none flex-wrap flex-row w-full justify-center "
+                                        role="tablist"
+                                        aria-owns="tab-1 tab-2 tab-3"
+                                    >
+                                        <li id="tab-1" role="tab" className="w-fit -mb-px last:mr-0 flex-auto text-center border border-[#B5A191] ">
+                                            <a
+                                                className={
+                                                    "text-sm px-5 py-3  block leading-normal " +
+                                                    (openTab === 1
+                                                        ? "text-white bg-[#B5A191]"
+                                                        : "text-[#B5A191]  duration-300")
+                                                }
+                                                onClick={e => {
+                                                    e.preventDefault();
+                                                    setOpenTab(1);
+                                                }}
+                                                data-toggle="tab"
+                                                href="#link1"
 
-                                        >
-                                            INTERIOR
-                                        </a>
-                                    </li>
-                                    <li id="tab-2" role="tab" className="-mb-px  last:mr-0 flex-auto text-center">
-                                        <a
-                                            className={
-                                                "text-sm px-5 py-3  block leading-normal " +
-                                                (openTab === 2
-                                                    ? "text-white bg-[#82603f] border border-[#82603f]"
-                                                    : "text-gray-500 border border-[#82603f] ")
-                                            }
-                                            onClick={e => {
-                                                e.preventDefault();
-                                                setOpenTab(2);
-                                            }}
-                                            data-toggle="tab"
-                                            href="#link2"
+                                            >
+                                                INTERIOR
+                                            </a>
+                                        </li>
+                                        <li id="tab-2" role="tab" className="w-fit -mb-px last:mr-0 flex-auto text-center border border-[#B5A191] ">
+                                            <a
+                                                className={
+                                                    "text-sm px-5 py-3  block leading-normal " +
+                                                    (openTab === 2
+                                                        ? "text-white bg-[#B5A191]"
+                                                        : "text-[#B5A191]  duration-300  ")
+                                                }
+                                                onClick={e => {
+                                                    e.preventDefault();
+                                                    setOpenTab(2);
+                                                }}
+                                                data-toggle="tab"
+                                                href="#link2"
 
-                                        >
-                                            EXTERIOR
-                                        </a>
-                                    </li>
+                                            >
+                                                EXTERIOR
+                                            </a>
+                                        </li>
 
-                                    <li id="tab-3" role="tab" className="-mb-px last:mr-0 flex-auto text-center">
-                                        <a
-                                            className={
-                                                "text-sm px-5 py-3  block leading-normal " +
-                                                (openTab === 3
-                                                    ? "text-white bg-[#82603f] border border-[#82603f]"
-                                                    : "text-gray-500 hover:text-[#82603f] border border-[#82603f]")
-                                            }
-                                            onClick={e => {
-                                                e.preventDefault();
-                                                setOpenTab(3);
-                                            }}
-                                            data-toggle="tab"
-                                            href="#link3"
+                                        <li id="tab-3" role="tab" className="w-fit -mb-px last:mr-0 flex-auto text-center border border-[#B5A191] ">
+                                            <a
+                                                className={
+                                                    "text-sm px-5 py-3  block leading-normal " +
+                                                    (openTab === 3
+                                                        ? "text-white bg-[#B5A191]"
+                                                        : "text-[#B5A191]  duration-300 ")
+                                                }
+                                                onClick={e => {
+                                                    e.preventDefault();
+                                                    setOpenTab(3);
+                                                }}
+                                                data-toggle="tab"
+                                                href="#link3"
 
-                                        >
-                                            VIDEO
-                                        </a>
-                                    </li>
-                                </ul>
+                                            >
+                                                VIDEO
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
 
 
                                 <div className="relative flex flex-col min-w-0 break-words w-full mt-2">
-                                    <div className="md:py-5 flex-auto overflow-hidden">
-                                        <div className="tab-content tab-space  h-full">
-                                            <div className={openTab === 1 ? "block" : "hidden"} id="link1">
-                                                <div id="mainCarousel" className="carousel  w-full h-[750px] ">
+                                    <div className="md:py-5 flex-auto ">
+                                        <div className="tab-content tab-space h-full mt-20 md:mt-0" >
+                                            <div className={openTab === 1 ? "w-full grid grid-cols-1" : "hidden"} id="link1">
 
+                                                <div id="mainCarousel" className="carousel w-full h-[700px] ">
 
-                                                    {image.map((item, index) => (
+                                                    {interior.map((item, index) => (
                                                         <div
                                                             key={index}
-                                                            className="carousel__slide w-full h-[750px]  "
+                                                            className="carousel__slide w-full h-[700px]  "
                                                             data-src={item.src}
                                                             data-fancybox
-
                                                         >
                                                             <img src={item.src}
                                                                 className="object-cover h-full w-full object-center " />
@@ -248,12 +248,10 @@ const gallery = () => {
 
                                                     }
 
-
-
                                                 </div>
 
-                                                <div id="thumbCarousel" className="carousel flex !flex-col">
-                                                    {image.map((item, index) => (
+                                                <div id="thumbCarousel" className="carousel mt-3 -translate-y-28 md:translate-y-0">
+                                                    {interior.map((item, index) => (
                                                         <div
                                                             key={index}
                                                             className="carousel__slide">
@@ -264,78 +262,102 @@ const gallery = () => {
                                                     }
 
                                                 </div>
+
+
+
                                             </div>
-                                            <div className={openTab === 2 ? "block" : "hidden"} id="link2">
-                                                <div id="mainCarousel2" className="carousel  w-full h-[750px] ">
+                                            <div className={openTab === 2 ? "w-full grid grid-cols-1" : "hidden"} id="link2">
+
+                                                {loading ? <div className="w-full min-h-[700px] h-full flex justify-center items-center">
+                                                    <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                                        width="40px" height="40px" viewBox="0 0 50 50" >
+                                                        <path fill="#b5a191" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z">
+                                                            <animateTransform attributeType="xml"
+                                                                attributeName="transform"
+                                                                type="rotate"
+                                                                from="0 25 25"
+                                                                to="360 25 25"
+                                                                dur="0.6s"
+                                                                repeatCount="indefinite" />
+                                                        </path>
+                                                    </svg>
+                                                </div> :
+                                                    <div >
+                                                        <div id="mainCarousel2" className="carousel w-full h-[700px]">
 
 
-                                                    {image.map((item, index) => (
-                                                        <div
-                                                            key={index}
-                                                            className="carousel__slide w-full h-[750px]  "
-                                                            data-src={item.src}
-                                                            data-fancybox="gallery2"
+                                                            {exterior.map((item, index) => (
+                                                                <div
+                                                                    key={index}
+                                                                    className="carousel__slide w-full h-[700px]  "
+                                                                    data-src={item.src}
+                                                                    data-fancybox
 
-                                                        >
-                                                            <img src={item.src}
-                                                                className="object-cover h-full w-full object-center " />
+                                                                >
+                                                                    <img src={item.src}
+                                                                        className="object-cover h-full w-full object-center " />
+                                                                </div>
+                                                            ))
+
+                                                            }
+
+
+
                                                         </div>
-                                                    ))
 
-                                                    }
+                                                        <div id="thumbCarousel2" className="carousel mt-3 -translate-y-28 md:translate-y-0">
+                                                            {exterior.map((item, index) => (
+                                                                <div
+                                                                    key={index}
+                                                                    className="carousel__slide">
+                                                                    <img className="panzoom__content object-cover" src={item.src} />
+                                                                </div>
+                                                            ))
 
+                                                            }
 
-
-                                                </div>
-
-                                                <div id="thumbCarousel2" className="carousel flex !flex-col">
-                                                    {image.map((item, index) => (
-                                                        <div
-                                                            key={index}
-                                                            className="carousel__slide">
-                                                            <img className="panzoom__content object-cover" src={item.src} />
                                                         </div>
-                                                    ))
+                                                    </div>
 
-                                                    }
+                                                }
 
-                                                </div>
+
+
+
                                             </div>
                                             <div className={openTab === 3 ? "block" : "hidden"} id="link3">
-                                                <div id="mainCarousel3" className="carousel  w-full h-[750px] ">
+
+                                                {loading ? <div className="w-full min-h-[700px] h-full flex justify-center items-center">
+                                                    <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                                        width="40px" height="40px" viewBox="0 0 50 50" >
+                                                        <path fill="#b5a191" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z">
+                                                            <animateTransform attributeType="xml"
+                                                                attributeName="transform"
+                                                                type="rotate"
+                                                                from="0 25 25"
+                                                                to="360 25 25"
+                                                                dur="0.6s"
+                                                                repeatCount="indefinite" />
+                                                        </path>
+                                                    </svg>
+                                                </div> :
+                                                    <div className=" w-full min-h-[700px] h-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2  ">
+                                                        {videoList.map((item, index) => (
+                                                            <div key={index}>
+                                                                <iframe className="w-full aspect-video" src={item.src} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen ></iframe>
+                                                            </div>
+                                                        ))
+                                                        }
+                                                    </div>
+
+                                                }
 
 
-                                                    {image.map((item, index) => (
-                                                        <div
-                                                            key={index}
-                                                            className="carousel__slide w-full h-[750px]  "
-                                                            data-src={item.src}
-                                                            data-fancybox="gallery3"
-
-                                                        >
-                                                            <img src={item.src}
-                                                                className="object-cover h-full w-full object-center " />
-                                                        </div>
-                                                    ))
-
-                                                    }
 
 
 
-                                                </div>
 
-                                                <div id="thumbCarousel3" className="carousel flex !flex-col">
-                                                    {image.map((item, index) => (
-                                                        <div
-                                                            key={index}
-                                                            className="carousel__slide">
-                                                            <img className="panzoom__content object-cover" src={item.src} />
-                                                        </div>
-                                                    ))
 
-                                                    }
-
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -346,13 +368,13 @@ const gallery = () => {
                         </div>
                     </div>
 
-                </section>
+                </section >
 
 
 
 
-            </div>
-        </Layout>
+            </div >
+        </Layout >
     );
 }
 

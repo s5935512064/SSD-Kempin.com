@@ -21,15 +21,15 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
 
-  useEffect(() => {
+  // useEffect(() => {
 
-    // router.events.on('routeChangeStart', clearEventListener)
-    // some browsers (like safari) may require a timeout to delay calling this
-    // function after a page has loaded; otherwise, it may not update the position
+  //   // router.events.on('routeChangeStart', clearEventListener)
+  //   // some browsers (like safari) may require a timeout to delay calling this
+  //   // function after a page has loaded; otherwise, it may not update the position
 
-    window.scrollTo(0, 0);
+  //   window.scrollTo(0, 0);
 
-  }, [pathname]);
+  // }, [pathname]);
 
   useEffect(() => {
     AOS.init({
