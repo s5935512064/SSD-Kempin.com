@@ -40,7 +40,7 @@ const Navbar = () => {
 
     return (
         <>
-            <div className="px-2 lg:px-10 fixed top-0 h-16 w-full flex justify-center bg-[#010F2A] z-20">
+            <div className="px-2 lg:px-10 fixed top-0 h-16 w-full flex justify-center bg-[#010F2A] !z-[99]">
                 <div className="max-w-7xl w-full h-full flex justify-between ">
 
                     <div className="lg:hidden">

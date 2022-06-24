@@ -4,7 +4,7 @@ const Cookies = () => {
 
     return (
         <>
-            <div className="fixed bottom-3 left-3">
+            <div className="fixed bottom-3 left-3 !z-[99]">
                 <div className="group relative flex h-full items-center">
                     <button
                         id="show-preferencesModal"

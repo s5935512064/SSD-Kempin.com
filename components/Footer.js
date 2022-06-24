@@ -162,9 +162,12 @@ const Footer = () => {
                             <p className=" text-sm cursor-pointer md:pl-3  ">
                                 Disclaimer
                             </p>
-                            <p className=" text-sm pl-3 cursor-pointer ">
-                                Privacy Policy
-                            </p>
+
+                            <Link href={"https://siamsindhorn.com/privacy-policy"}>
+                                <a target="_blank" rel="noopener noreferrer" className=" text-sm pl-3 cursor-pointer ">
+                                    Privacy Policy
+                                </a>
+                            </Link>
                         </div>
                     </div>
 

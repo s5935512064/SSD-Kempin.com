@@ -2,7 +2,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Layout from '../../components/Layout'
 import React, { useState, useEffect } from "react";
-
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 
 const news = () => {
@@ -49,7 +50,7 @@ const news = () => {
                     <div className="max-w-7xl w-full h-full py-10">
                         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-2">
 
-                            <div className="h-80 grid grid-cols-1  relative drop-shadow overflow-hidden">
+                            <div className="h-80 relative drop-shadow overflow-hidden ">
                                 <div className="w-full h-80 relative">
                                     <Image
                                         src="/assets/service/service5.jpg"
@@ -59,39 +60,56 @@ const news = () => {
                                     />
 
                                 </div>
-                                <div className="bottom-0 w-full h-fit translate-y-24 hover:translate-y-0 cursor-pointer absolute bg-gradient-to-t hover:h-full from-[#010F2A] text-white duration-500  p-4 flex flex-col justify-start hover:justify-center overflow-hidden">
-                                    <p className="text-xl font-bold mb-2">Topic 1</p>
+                                <div className="bottom-0 w-full h-fit translate-y-14 hover:translate-y-0 cursor-pointer absolute bg-gradient-to-t hover:h-full from-[#010F2A] text-white duration-500  p-4 flex flex-col justify-start hover:justify-end overflow-hidden">
+
                                     <p className="font-light mb-4 text-sm">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima quasi nostrum facere cum corporis facilis, ea molestias qui tempora modi!</p>
-                                    <p className="font-light mb-2">12 06 2022</p>
-                                    <button className="w-full px-2 py-1 border">Read more..</button>
+                                    <div className="flex w-full justify-between  items-end">
+                                        <div>
+
+                                            <p className="font-light text-sm">June 24, 2565</p>
+                                            <p className="font-light  text-sm">Post by: Siam sindhorn</p>
+                                        </div>
+                                        <Link href={"/news/1"}>
+                                            <button className="w-fit h-fit px-2 py-1 border text-sm">Read more..</button>
+                                        </Link>
+
+                                    </div>
 
                                 </div>
 
 
                             </div>
 
-                            <div className="h-80 grid grid-cols-1  relative drop-shadow overflow-hidden">
+
+                            <div className="h-80 relative drop-shadow overflow-hidden ">
                                 <div className="w-full h-80 relative">
                                     <Image
                                         src="/assets/news/1.png"
-                                        alt="news"
+                                        alt="logo"
                                         layout="fill"
                                         objectFit="cover"
                                     />
 
                                 </div>
-                                <div className="bottom-0 w-full h-fit translate-y-24 hover:translate-y-0 cursor-pointer absolute bg-gradient-to-t hover:h-full from-[#010F2A] text-white duration-500  p-4 flex flex-col justify-start hover:justify-center overflow-hidden">
-                                    <p className="text-xl font-bold mb-2">Topic 1</p>
+                                <div className="bottom-0 w-full h-fit translate-y-14 hover:translate-y-0 cursor-pointer absolute bg-gradient-to-t hover:h-full from-[#010F2A] text-white duration-500  p-4 flex flex-col justify-start hover:justify-end overflow-hidden">
+
                                     <p className="font-light mb-4 text-sm">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima quasi nostrum facere cum corporis facilis, ea molestias qui tempora modi!</p>
-                                    <p className="font-light mb-2">12 06 2022</p>
-                                    <button className="w-full px-2 py-1 border">Read more..</button>
+                                    <div className="flex w-full justify-between  items-end">
+                                        <div>
+
+                                            <p className="font-light text-sm">June 24, 2565</p>
+                                            <p className="font-light  text-sm">Post by: Siam sindhorn</p>
+                                        </div>
+
+                                        <button className="w-fit h-fit px-2 py-1 border text-sm">Read more..</button>
+                                    </div>
 
                                 </div>
 
 
                             </div>
 
-                            <div className="h-80 grid grid-cols-1  relative drop-shadow overflow-hidden">
+                            <div className="h-80 relative drop-shadow overflow-hidden ">
                                 <div className="w-full h-80 relative">
                                     <Image
                                         src="/assets/news/2.png"
@@ -101,18 +119,26 @@ const news = () => {
                                     />
 
                                 </div>
-                                <div className="bottom-0 w-full h-fit translate-y-24 hover:translate-y-0 cursor-pointer absolute bg-gradient-to-t hover:h-full from-[#010F2A] text-white duration-500  p-4 flex flex-col justify-start hover:justify-center overflow-hidden">
-                                    <p className="text-xl font-bold mb-2">Topic 1</p>
+                                <div className="bottom-0 w-full h-fit translate-y-14 hover:translate-y-0 cursor-pointer absolute bg-gradient-to-t hover:h-full from-[#010F2A] text-white duration-500  p-4 flex flex-col justify-start hover:justify-end overflow-hidden">
+
                                     <p className="font-light mb-4 text-sm">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima quasi nostrum facere cum corporis facilis, ea molestias qui tempora modi!</p>
-                                    <p className="font-light mb-2">12 06 2022</p>
-                                    <button className="w-full px-2 py-1 border">Read more..</button>
+                                    <div className="flex w-full justify-between  items-end">
+                                        <div>
+
+                                            <p className="font-light text-sm">June 24, 2565</p>
+                                            <p className="font-light  text-sm">Post by: Siam sindhorn</p>
+                                        </div>
+
+                                        <button className="w-fit h-fit px-2 py-1 border text-sm">Read more..</button>
+                                    </div>
 
                                 </div>
 
 
                             </div>
 
-                            <div className="h-80 grid grid-cols-1  relative drop-shadow overflow-hidden">
+
+                            <div className="h-80 relative drop-shadow overflow-hidden ">
                                 <div className="w-full h-80 relative">
                                     <Image
                                         src="/assets/news/1.png"
@@ -122,11 +148,18 @@ const news = () => {
                                     />
 
                                 </div>
-                                <div className="bottom-0 w-full h-fit translate-y-24 hover:translate-y-0 cursor-pointer absolute bg-gradient-to-t hover:h-full from-[#010F2A] text-white duration-500  p-4 flex flex-col justify-start hover:justify-center overflow-hidden">
-                                    <p className="text-xl font-bold mb-2">Topic 1</p>
+                                <div className="bottom-0 w-full h-fit translate-y-14 hover:translate-y-0 cursor-pointer absolute bg-gradient-to-t hover:h-full from-[#010F2A] text-white duration-500  p-4 flex flex-col justify-start hover:justify-end overflow-hidden">
+
                                     <p className="font-light mb-4 text-sm">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima quasi nostrum facere cum corporis facilis, ea molestias qui tempora modi!</p>
-                                    <p className="font-light mb-2">12 06 2022</p>
-                                    <button className="w-full px-2 py-1 border">Read more..</button>
+                                    <div className="flex w-full justify-between  items-end">
+                                        <div>
+
+                                            <p className="font-light text-sm">June 24, 2565</p>
+                                            <p className="font-light  text-sm">Post by: Siam sindhorn</p>
+                                        </div>
+
+                                        <button className="w-fit h-fit px-2 py-1 border text-sm">Read more..</button>
+                                    </div>
 
                                 </div>
 

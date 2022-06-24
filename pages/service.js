@@ -164,7 +164,7 @@ const service = () => {
                  flex justify-center items-center overflow-hidden "
                 >
 
-                    <div id="content" className="mb-80 w-full h-screen bg-white flex justify-center items-center absolute">
+                    <div className="mb-80 w-full h-screen bg-white flex justify-center items-center absolute">
                         <Slider {...settings} className="!w-full h-screen  ">
                             <div className="w-full h-screen  bg-[url('/assets/service/service2.jpg')] bg-cover bg-center bg-no-repeat" />
                             <div className="w-full h-screen  bg-[url('/assets/service/service3.jpg')] bg-cover bg-center bg-no-repeat" />
@@ -176,7 +176,7 @@ const service = () => {
                     </div>
 
                     <div className="w-full h-52 absolute bottom-5 bg-white  flex justify-center items-center">
-                        <p className="text-5xl text-[#B6A694] font-semibold">GREEN SPACE</p>
+                        <p className="text-5xl text-[#B6A694] font-medium">GREEN SPACE</p>
                     </div>
 
                 </section>
@@ -186,12 +186,12 @@ const service = () => {
                     className=" w-full h-screen relative flex justify-center items-center overflow-hidden mt-4"
                 >
                     <div className="w-full h-52 absolute bottom-0 z-10 flex justify-center items-center">
-                        <p className="text-5xl text-white drop-shadow font-semibold">RESIDENCE LOBBY</p>
+                        <p className="text-5xl text-white drop-shadow font-medium">RESIDENCE LOBBY</p>
 
                     </div>
 
 
-                    <div id="content" className="snap-start w-full h-screen bg-white flex justify-center items-center absolute">
+                    <div className="snap-start w-full h-screen bg-white flex justify-center items-center absolute">
                         <Slider {...settings} className="!w-full !h-screen  ">
                             <div className="w-full h-screen  bg-[url('/assets/service/service10.jpg')] bg-cover bg-center bg-no-repeat" />
                             <div className="w-full h-screen  bg-[url('/assets/service/service9.jpg')] bg-cover bg-center bg-no-repeat" />
@@ -207,7 +207,7 @@ const service = () => {
                     className=" w-full h-screen relative flex justify-center items-center overflow-hidden mt-4"
                 >
                     <div className="w-full h-52 absolute bottom-0  z-10 flex justify-center items-center">
-                        <p className="text-5xl text-white drop-shadow  font-semibold">RESIDENCE LOUNGE</p>
+                        <p className="text-5xl text-white drop-shadow  font-medium">RESIDENCE LOUNGE</p>
 
                     </div>
 
@@ -247,12 +247,12 @@ const service = () => {
                     className=" w-full h-screen relative flex justify-center items-center overflow-hidden mt-4"
                 >
                     <div className="w-full h-52 absolute bottom-0  z-10 flex justify-center items-center">
-                        <p className="text-5xl text-white drop-shadow  font-semibold">ROOFTOP SWIMMING POOL</p>
+                        <p className="text-5xl text-white drop-shadow  font-medium">ROOFTOP SWIMMING POOL</p>
 
                     </div>
 
 
-                    <div id="content" className="w-full h-screen bg-white flex justify-center items-center absolute">
+                    <div className="w-full h-screen bg-white flex justify-center items-center absolute">
                         <Slider {...settings} className="!w-full !h-screen  ">
                             <div className="w-full h-screen  bg-[url('/assets/service/swimming1.jpg')] bg-cover bg-center bg-no-repeat" />
                             <div className="w-full h-screen  bg-[url('/assets/service/swimming2.jpg')] bg-cover bg-bottom bg-no-repeat" />
@@ -268,12 +268,12 @@ const service = () => {
                     className="w-full h-screen relative flex justify-center items-center overflow-hidden mt-4 "
                 >
                     <div className="w-full h-52 absolute bottom-0  z-10 flex justify-center items-center">
-                        <p className="text-5xl text-white drop-shadow  font-semibold">FITNESS ROOM</p>
+                        <p className="text-5xl text-white drop-shadow  font-medium">FITNESS ROOM</p>
 
                     </div>
 
 
-                    <div id="content" className="snap-start w-full h-screen bg-white flex justify-center items-center absolute">
+                    <div className="snap-start w-full h-screen bg-white flex justify-center items-center absolute">
                         <Slider {...settings} className="!w-full !h-screen  ">
                             <div className="w-full h-screen  bg-[url('/assets/service/gym1.jpg')] bg-cover bg-center bg-no-repeat" />
                             <div className="w-full h-screen  bg-[url('/assets/service/gym2.jpg')] bg-cover bg-center bg-no-repeat" />

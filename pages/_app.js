@@ -1,6 +1,6 @@
 import '../styles/globals.css'
 import "../styles/cookieconsent.css";
-// import '../styles/slick.css'
+import '../styles/slick.css'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { AnimatePresence } from "framer-motion";
@@ -21,15 +21,15 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
 
-  // useEffect(() => {
+  useEffect(() => {
 
-  //   // router.events.on('routeChangeStart', clearEventListener)
-  //   // some browsers (like safari) may require a timeout to delay calling this
-  //   // function after a page has loaded; otherwise, it may not update the position
+    // router.events.on('routeChangeStart', clearEventListener)
+    // some browsers (like safari) may require a timeout to delay calling this
+    // function after a page has loaded; otherwise, it may not update the position
 
-  //   window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
 
-  // }, [pathname]);
+  }, [pathname]);
 
   useEffect(() => {
     AOS.init({
@@ -200,29 +200,6 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-
-      {/* <Script
-        strategy="afterInteractive"
-        data-cookiecategory="analytics"
-        async
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-      />
-
-      <Script
-        data-cookiecategory="analytics"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
-              page_path: window.location.pathname,
-            });
-          `,
-        }}
-      /> */}
-
       <AnimatePresence
         exitBeforeEnter
         initial={false}

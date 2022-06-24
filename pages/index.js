@@ -99,17 +99,23 @@ export default function Home() {
 
           <div className="max-w-7xl w-full min-h-[666px] h-full px-5 md:px-10 bg-[url('/assets/background.jpg')] bg-top bg-no-repeat bg-cover mb-4 grid grid-cols-1 md:grid-cols-2">
             <div className="md:pr-16 flex flex-col justify-center items-center text-white py-5">
-              <p className="md:w-full text-4xl font-bold mb-5 md:mb-10 text-center md:text-left">Residence</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi iure molestias repellendus odit error voluptatum veniam aliquam nemo autem atque. Earum ratione nesciunt aliquid sed laboriosam similique vel consectetur repellat.</p>
-              <div className="w-full mt-5 md:mt-10 ">
+              <p className="md:w-full text-4xl font-bold mb-5 text-center md:text-left uppercase">Residence</p>
+              <p className="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi iure molestias repellendus odit error voluptatum veniam aliquam nemo autem atque. Earum ratione nesciunt aliquid sed laboriosam similique vel consectetur repellat.</p>
+              <div className="w-full mt-5 md:mt-10 flex ">
 
-                <button className="uppercase">discover more</button>
+                <button className="uppercase text-sm px-2 py-1 w-fit border hover:bg-white hover:text-[#010F2A] ">discover more</button>
               </div>
             </div>
             <div className="h-full flex justify-center items-center py-5">
 
-              <div className="w-full h-[350px] md:h-[440px] bg-white">
-
+              <div className="w-full h-[350px] md:h-[440px] relative">
+                <Image
+                  src="/assets/service/service9.jpg"
+                  alt="residence"
+                  layout="fill"
+                  objectFit="cover"
+                  className="hover:scale-110 duration-300"
+                />
               </div>
             </div>
 
@@ -117,18 +123,26 @@ export default function Home() {
 
           <div className="max-w-7xl w-full min-h-[666px] h-full px-5 md:px-10 bg-[url('/assets/gallery/gallery.jpg')] bg-top bg-no-repeat bg-cover mb-4 grid grid-cols-1 md:grid-cols-2 relative ">
             <div className="absolute w-full h-full bg-gradient-to-b from-[#010F2A]/50 " />
-            <div className="md:pr-16 flex flex-col justify-center items-center text-white py-5 z-10">
-              <p className="md:w-full text-4xl font-bold mb-5 md:mb-10 text-center md:text-left">Gallery</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi iure molestias repellendus odit error voluptatum veniam aliquam nemo autem atque. Earum ratione nesciunt aliquid sed laboriosam similique vel consectetur repellat.</p>
-              <div className="w-full mt-5 md:mt-10 ">
 
-                <button className="uppercase">discover more</button>
-              </div>
-            </div>
             <div className="h-full flex justify-center items-center py-5 z-10">
 
-              <div className="w-full h-[350px] md:h-[440px] bg-white">
+              <div className="w-full h-[350px] md:h-[440px] relative">
+                <Image
+                  src="/assets/service/swimming3.jpg"
+                  alt="residence"
+                  layout="fill"
+                  objectFit="cover"
+                  className="hover:scale-110 duration-300"
+                />
+              </div>
+            </div>
 
+            <div className="md:pl-16 flex flex-col justify-center items-center text-white py-5 z-10">
+              <p className="md:w-full text-4xl font-bold mb-5 text-center md:text-left uppercase">Gallery</p>
+              <p className="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi iure molestias repellendus odit error voluptatum veniam aliquam nemo autem atque. Earum ratione nesciunt aliquid sed laboriosam similique vel consectetur repellat.</p>
+              <div className="w-full mt-5 md:mt-10 flex ">
+
+                <button className="uppercase text-sm px-2 py-1 w-fit border hover:bg-white hover:text-[#010F2A] ">discover more</button>
               </div>
             </div>
 
@@ -136,17 +150,23 @@ export default function Home() {
           <div className="max-w-7xl w-full min-h-[666px] h-full px-5 md:px-10  bg-[url('/assets/service/service1.jpg')] bg-center bg-no-repeat bg-cover mb-4 grid grid-cols-1 md:grid-cols-2 relative">
             <div className="absolute w-full h-full bg-gradient-to-b from-[#010F2A]/50 " />
             <div className="md:pr-16 flex flex-col justify-center items-center text-white py-5 z-10">
-              <p className="md:w-full text-4xl font-bold mb-5 md:mb-10 text-center md:text-left">Service</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi iure molestias repellendus odit error voluptatum veniam aliquam nemo autem atque. Earum ratione nesciunt aliquid sed laboriosam similique vel consectetur repellat.</p>
-              <div className="w-full mt-5 md:mt-10 ">
+              <p className="md:w-full text-4xl font-bold mb-5 text-center md:text-left uppercase">Service</p>
+              <p className="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi iure molestias repellendus odit error voluptatum veniam aliquam nemo autem atque. Earum ratione nesciunt aliquid sed laboriosam similique vel consectetur repellat.</p>
+              <div className="w-full mt-5 md:mt-10 flex ">
 
-                <button className="uppercase">discover more</button>
+                <button className="uppercase text-sm px-2 py-1 w-fit border hover:bg-white hover:text-[#010F2A] ">discover more</button>
               </div>
             </div>
             <div className="h-full flex justify-center items-center py-5 z-10">
 
-              <div className="w-full h-[350px] md:h-[440px] bg-white">
-
+              <div className="w-full h-[350px] md:h-[440px] relative">
+                <Image
+                  src="/assets/service/kempinski4.jpg"
+                  alt="kempinski4"
+                  layout="fill"
+                  objectFit="cover"
+                  className="hover:scale-110 duration-300"
+                />
               </div>
             </div>
 

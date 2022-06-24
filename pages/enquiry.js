@@ -2,8 +2,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Layout from '../components/Layout'
 import React, { useState, useEffect } from "react";
-
 import { Fancybox, Carousel, Panzoom } from "@fancyapps/ui";
+import Link from "next/link";
 
 
 const enquiry = () => {
@@ -51,7 +51,7 @@ const enquiry = () => {
                         <div className="w-1/3 h-full bg-[url('/assets/Artwork8.png')] bg-right bg-cover bg-no-repeat absolute opacity-80 translate-y-16 " />
                     </div>
 
-                    <div className="w-full h-full  relative  flex flex-col  items-center ">
+                    <div className="w-full h-full  relative  flex flex-col  items-center pt-16 ">
                         <div className="px-4 md:px-10 max-w-7xl w-full min-h-screen h-full flex flex-col justify-center items-center  text-[#B5A191] gap-2 ">
 
                             <p className="text-2xl text-center md:text-3xl font-bold">
@@ -146,12 +146,26 @@ const enquiry = () => {
 
                             </form>
 
-                            <div className="flex items-start mb-6">
+                            <div className="flex items-start mb-2 max-w-lg w-full">
                                 <div className="flex items-center h-5">
                                     <input id="remember" type="checkbox" value="" className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 " required />
                                 </div>
-                                <label htmlFor="remember" className="ml-2 text-center text-sm md:text-base">Sindhorn Village Members Card click here for special privilege</label>
+                                <label htmlFor="remember" className="ml-2 text-center text-sm ">Sindhorn Village Members Card click here for special privilege</label>
                             </div>
+
+                            <div className="max-w-lg mb-6">
+                                <p className=" text-sm font-light mb-2">
+                                    Siam Sindhorn Co., Ltd. and its group companies (&quot;Company&quot;) collect, use, or disclose your Personal Data for the purpose of communication, public relations, or offering products and services with you in accordance with our Privacy Policy.  In addition, Company also provides appropriate security measures to protect your privacy.
+                                </p>
+                                <p className="text-sm  mb-4 font-light">
+                                    You can access our Privacy Policy by clicking <Link href="/cookiepolicy"><span className="text-[#B6A694]">here.</span></Link>
+                                </p>
+                                <p className="text-sm font-light">
+                                    <input type="checkbox" className="mr-2" />
+                                    I have read the <Link href="/cookiepolicy"><span className="text-[#B6A694]">Privacy Policy </span></Link>, and hereby give my consent for Siam Sindhorn Co., Ltd. and its group companies (&quot;Company&quot;) to collect, use, or disclose my Personal Data.</p>
+
+                            </div>
+
 
 
 
